@@ -55,9 +55,9 @@ function game() {
                 }
             }
         }
+        const playerSelection = window.prompt("Select Rock, Paper or Scissors:");
         const computerSelection = computerPlay();
         console.log ("Computer selection: " + computerSelection);  //Remove
-        const playerSelection = "Scissors";
 
         playRound(playerSelection,computerSelection);
     }
