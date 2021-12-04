@@ -13,6 +13,17 @@ function computerPlay () {
 
 function game() {
     for (let i = 1; i <= 5; i++) {
+        //prompt for player selection of rock, paper or scissors
+        const playerSelection = window.prompt("Select Rock, Paper or Scissors:");
+
+        //selects computers choice of rock, paper or scissors
+        const computerSelection = computerPlay();
+        console.log ("Computer selection: " + computerSelection);  //Remove
+        
+        //call playRound function
+        playRound(playerSelection,computerSelection);
+
+        //define playRound
         function playRound (playerSelection, computerSelection) {
             //sends playerselection to lowercase
             let playerPick = playerSelection.toLowerCase();
@@ -49,10 +60,6 @@ function game() {
                 }
             }
         }
-        const playerSelection = window.prompt("Select Rock, Paper or Scissors:");
-        const computerSelection = computerPlay();
-        console.log ("Computer selection: " + computerSelection);  //Remove
-        playRound(playerSelection,computerSelection);
     }
 }
 
