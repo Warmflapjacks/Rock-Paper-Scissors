@@ -1,5 +1,5 @@
 //computer selector
-function computerPlay () {
+function getComputerSelection () {
     let computerOption = [
         "rock",
         "paper",
@@ -11,14 +11,14 @@ function computerPlay () {
     return computerSelection
 }
 
-function game() {
+function playGame() {
     for (let i = 1; i <= 5; i++) {
         //prompt for player selection of rock, paper or scissors
         const playerSelection = window.prompt("Select Rock, Paper or Scissors:");
 
-        //selects computers choice of rock, paper or scissors
-        const computerSelection = computerPlay();
-        console.log ("Computer selection: " + computerSelection);  //Remove
+        //selects computers choice of rock, paper or scissors. option to print selection to console
+        const computerSelection = getComputerSelection();
+        //console.log ("Computer selection: " + computerSelection); 
         
         //call playRound function
         playRound(playerSelection,computerSelection);
@@ -63,4 +63,4 @@ function game() {
     }
 }
 
-game();
+playGame();
