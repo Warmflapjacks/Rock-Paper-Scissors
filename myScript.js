@@ -22,42 +22,42 @@ function playGame() {
         
         //call playRound function
         playRound(playerSelection,computerSelection);
+    }
+}
 
-        //define playRound
-        function playRound (playerSelection, computerSelection) {
-            //sends playerselection to lowercase
-            let playerPick = playerSelection.toLowerCase();
+//define playRound
+function playRound (playerSelection, computerSelection) {
+    //sends playerselection to lowercase
+    let playerPick = playerSelection.toLowerCase();
 
-            //if selections are a tie
-            if (playerPick === computerSelection) {
-                console.log ("Its a tie!");
+    //if selections are a tie
+    if (playerPick === computerSelection) {
+        console.log ("Its a tie!");
+    }
+    //used when not a tie
+    else{
+        if (playerPick === "paper") {
+            if (computerSelection === "rock") {
+                console.log ("You win! " + playerSelection + " beats " + computerSelection);
             }
-            //used when not a tie
-            else{
-                if (playerPick === "paper") {
-                    if (computerSelection === "rock") {
-                        console.log ("You win! " + playerSelection + " beats " + computerSelection);
-                    }
-                    else {
-                        console.log("You lose! Scissors beats " + playerSelection);
-                    }
-                }
-                if (playerPick === "rock") {
-                    if (computerSelection === "scissors") {
-                        console.log("You win! " + playerSelection + " beats " + computerSelection);
-                    }
-                    else {
-                        console.log("You lose! Paper beats " + playerSelection);
-                    }
-                }
-                if (playerPick === "scissors") {
-                    if (computerSelection === "paper") {
-                        console.log("You win! " + playerSelection + " beats " + computerSelection);
-                    }
-                    else {
-                        console.log("You lose! Rock beats " + playerSelection);
-                    }
-                }
+            else {
+                console.log("You lose! Scissors beats " + playerSelection);
+            }
+        }
+        if (playerPick === "rock") {
+            if (computerSelection === "scissors") {
+                console.log("You win! " + playerSelection + " beats " + computerSelection);
+            }
+            else {
+                console.log("You lose! Paper beats " + playerSelection);
+            }
+        }
+        if (playerPick === "scissors") {
+            if (computerSelection === "paper") {
+                console.log("You win! " + playerSelection + " beats " + computerSelection);
+            }
+            else {
+                console.log("You lose! Rock beats " + playerSelection);
             }
         }
     }
