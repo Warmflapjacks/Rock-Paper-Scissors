@@ -15,28 +15,33 @@ function playGame() {
     for (let i = 1; i <= 5; i++) {
         //prompt for player selection of rock, paper or scissors
         const playerSelection = window.prompt("Select Rock, Paper or Scissors:");
+        
+        //lowercase to check input validation parameters
+        const lowercasePlayerSelection = playerSelection.toLowerCase();
+        
+        // //call for input validation (UNDER CONSTRUCTION)
+        // validateUserInput(lowercasePlayerSelection);
+        // //(END UNDER CONSTRUCTION)
 
         //selects computers choice of rock, paper or scissors. option to print selection to console
         const computerSelection = getComputerSelection();
-        //console.log ("Computer selection: " + computerSelection); 
+        //console.log ("Computer selection: " + computerSelection);
         
         //call playRound function
-        playRound(playerSelection,computerSelection);
+        playRound(lowercasePlayerSelection,computerSelection);
     }
 }
 
 //define playRound
 function playRound (playerSelection, computerSelection) {
-    //sends playerselection to lowercase
-    let playerPick = playerSelection.toLowerCase();
-
+ 
     //if selections are a tie
-    if (playerPick === computerSelection) {
+    if (playerSelection === computerSelection) {                 
         console.log ("Its a tie!");
     }
     //used when not a tie
     else{
-        if (playerPick === "paper") {
+        if (playerSelection === "paper") {                       
             if (computerSelection === "rock") {
                 console.log ("You win! " + playerSelection + " beats " + computerSelection);
             }
@@ -44,7 +49,7 @@ function playRound (playerSelection, computerSelection) {
                 console.log("You lose! Scissors beats " + playerSelection);
             }
         }
-        if (playerPick === "rock") {
+        if (playerSelection === "rock") {                        
             if (computerSelection === "scissors") {
                 console.log("You win! " + playerSelection + " beats " + computerSelection);
             }
@@ -52,7 +57,7 @@ function playRound (playerSelection, computerSelection) {
                 console.log("You lose! Paper beats " + playerSelection);
             }
         }
-        if (playerPick === "scissors") {
+        if (playerSelection === "scissors") {                 
             if (computerSelection === "paper") {
                 console.log("You win! " + playerSelection + " beats " + computerSelection);
             }
@@ -63,4 +68,24 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
+// function validateUserInput(userInput); {
+//     //valid options to compare playerSelection to
+//     const validOption = [
+//         "rock",
+//         "paper",
+//         "scissors"
+//     ];
+
+//     //validates player input
+//     for(let i = 0; i <= validOption.length; i++) {
+//         if (lowercasePlayerSelection == validOption[i]) {
+//             console.log("INSIDE VALIDATION LOOP")
+//         }
+//         else {
+//             console.log("INSIDE INVALID LOOP");
+//             console.log("NEED VALID USER INPUT");
+//             break;
+//         }
+//     }
+// }
 playGame();
