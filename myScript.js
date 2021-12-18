@@ -12,29 +12,26 @@ function getComputerSelection () {
 }
 
 function playGame() {
-    for (let i = 1; i <= 5; i++) {
-        //prompt for player selection of rock, paper or scissors
-        const playerSelection = window.prompt("Select Rock, Paper or Scissors:");
-        
-        //lowercase to check input validation parameters
-        const lowercasePlayerSelection = playerSelection.toLowerCase();
-        
-        // //call for input validation (UNDER CONSTRUCTION)
-        // validateUserInput(lowercasePlayerSelection);
-        // //(END UNDER CONSTRUCTION)
+    //defines group of buttons from 
+    let buttons = document.querySelectorAll('button');
+    //loops through <button> and returns button id as playerSelection
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            let playerSelection = button.id;
+            // console.log(playerSelection);
 
-        //selects computers choice of rock, paper or scissors. option to print selection to console
-        const computerSelection = getComputerSelection();
-        //console.log ("Computer selection: " + computerSelection);
-        
-        //call playRound function
-        playRound(lowercasePlayerSelection,computerSelection);
-    }
+            //gets computer selection
+            let computerSelection = getComputerSelection();
+
+            //call playRound function
+            playRound(playerSelection,computerSelection);
+        })
+    })
 }
 
-//define playRound
+//define playRound. playerSelection and computerSelection are local variables in the function and are not global
 function playRound (playerSelection, computerSelection) {
- 
+
     //if selections are a tie
     if (playerSelection === computerSelection) {                 
         console.log ("Its a tie!");
@@ -67,25 +64,4 @@ function playRound (playerSelection, computerSelection) {
         }
     }
 }
-
-// function validateUserInput(userInput); {
-//     //valid options to compare playerSelection to
-//     const validOption = [
-//         "rock",
-//         "paper",
-//         "scissors"
-//     ];
-
-//     //validates player input
-//     for(let i = 0; i <= validOption.length; i++) {
-//         if (lowercasePlayerSelection == validOption[i]) {
-//             console.log("INSIDE VALIDATION LOOP")
-//         }
-//         else {
-//             console.log("INSIDE INVALID LOOP");
-//             console.log("NEED VALID USER INPUT");
-//             break;
-//         }
-//     }
-// }
 playGame();
