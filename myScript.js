@@ -18,7 +18,7 @@ function playGame() {
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             let playerSelection = button.id;
-            // console.log(playerSelection);
+            // document.getElementById("result-container").innerHTML = (playerSelection);
 
             //gets computer selection
             let computerSelection = getComputerSelection();
@@ -31,35 +31,35 @@ function playGame() {
 
 //define playRound. playerSelection and computerSelection are local variables in the function and are not global
 function playRound (playerSelection, computerSelection) {
-
+    
     //if selections are a tie
     if (playerSelection === computerSelection) {                 
-        console.log ("Its a tie!");
+        document.getElementById("result-container").textContent = "Its a tie!";
     }
     //used when not a tie
     else{
         if (playerSelection === "paper") {                       
             if (computerSelection === "rock") {
-                console.log ("You win! " + playerSelection + " beats " + computerSelection);
+                document.getElementById("result-container").textContent = "You win! Paper beats Rock";  
             }
             else {
-                console.log("You lose! Scissors beats " + playerSelection);
+                document.getElementById("result-container").textContent = "You lose! Scissors beats Paper";   
             }
         }
         if (playerSelection === "rock") {                        
             if (computerSelection === "scissors") {
-                console.log("You win! " + playerSelection + " beats " + computerSelection);
+                document.getElementById("result-container").textContent = "You win! Rocks beats Scissors";   
             }
             else {
-                console.log("You lose! Paper beats " + playerSelection);
+                document.getElementById("result-container").textContent = "You lose! Paper beats Rock";   
             }
         }
         if (playerSelection === "scissors") {                 
             if (computerSelection === "paper") {
-                console.log("You win! " + playerSelection + " beats " + computerSelection);
+                document.getElementById("result-container").textContent = "You win! Scissors beats Paper";
             }
             else {
-                console.log("You lose! Rock beats " + playerSelection);
+                document.getElementById("result-container").textContent = "You lose! Rock beats Scissors";
             }
         }
     }
