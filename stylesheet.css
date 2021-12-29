@@ -5,9 +5,9 @@
 }
 
 body {
-    /* background-image: url("images/Game-Thrones-Zoom-Background.jpeg");
+    background-image: url("images/the-wall.jpeg");
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     font-family: 'Moon Dance';
 }
 
@@ -26,6 +26,20 @@ h1 {
     font-size: 60px;
 }
 
+/*dragons color*/
+.red-color {
+    color: #e54141;
+}
+
+/*dragonglass color*/
+.obsidian-color {
+    color: #8f9fa6;
+}
+
+/*walkers color*/
+.dark-blue-color {
+    color: #1f3c4a;
+}
 
 .what-beats-what {
     display: flex;
@@ -41,4 +55,12 @@ h1 {
     align-items: center;
     margin: 10px;
     font-size: 40px;
+}
+
+.weapons {
+    display: flex;
+    flex: none;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid black;
 }
