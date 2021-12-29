@@ -1,5 +1,44 @@
-/* body {
-    background-image: url("images/Game-Thrones-Zoom-Background.jpeg");
+/*removes white edges around webpage*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url("images/Game-Thrones-Zoom-Background.jpeg");
     background-repeat: no-repeat;
-    background-size: cover;
-} */
+    background-size: cover; */
+    font-family: 'Moon Dance';
+}
+
+div {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+.what-beats-what {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.rounds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 40px;
+}
