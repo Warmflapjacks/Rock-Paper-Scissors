@@ -20,6 +20,15 @@ h1 {
     font-size: 60px;
 }
 
+button {    
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
 /*dragons color*/
 .red-color {
     color: #e54141;
@@ -53,14 +62,31 @@ h1 {
     font-weight: bold;
 }
 
-.weapons {
+.main-body {
     display: flex;
-    flex: none;
-    justify-content: space-evenly;
-    border: solid black;
+    flex-direction: column;
 }
 
-/*to manipulate style of javascript triggered events, do I need to manipulate that through DOM?*/
+.weapons {
+    border: solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+
+.images {
+    height: 125px;
+    width: 125px;
+}
+
+/*to manipulate style of javascript triggered events, do I need to manipulate that through DOM? NOT WORKING through css.*/
 /* .game-log {
     font-size: 30px;
     font-weight: bold;
