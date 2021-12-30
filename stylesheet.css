@@ -11,12 +11,6 @@ body {
     font-family: 'Moon Dance';
 }
 
-div {
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-}
-
 h1 {
     display: flex;
     justify-content: center;
@@ -47,6 +41,7 @@ h1 {
     align-items: center;
     margin: 10px;
     font-size: 40px;
+    font-weight: bold;
 }
 
 .rounds{
@@ -55,12 +50,18 @@ h1 {
     align-items: center;
     margin: 10px;
     font-size: 40px;
+    font-weight: bold;
 }
 
 .weapons {
     display: flex;
     flex: none;
     justify-content: space-evenly;
-    align-items: center;
     border: solid black;
 }
+
+/*to manipulate style of javascript triggered events, do I need to manipulate that through DOM?*/
+/* .game-log {
+    font-size: 30px;
+    font-weight: bold;
+} */
