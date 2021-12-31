@@ -1,6 +1,7 @@
 //global variables
 let playerScore = 0;
 let computerScore = 0;
+let buttons = document.querySelectorAll('button');
 
 //gets computer selection
 function getComputerSelection () {
@@ -16,8 +17,6 @@ function getComputerSelection () {
 }
 
 function playGame() {
-    //defines group of buttons from 
-    let buttons = document.querySelectorAll('button');
     //loops through <button> and returns button id as playerSelection
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
