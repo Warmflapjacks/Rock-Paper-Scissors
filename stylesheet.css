@@ -53,7 +53,7 @@ button {
     font-weight: bold;
 }
 
-.rounds{
+.points {
     display: flex;
     justify-content: center;
     align-items: center;
