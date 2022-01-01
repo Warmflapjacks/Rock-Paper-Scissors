@@ -82,8 +82,7 @@ function playRound (playerSelection, computerSelection) {
         }
     }
     //shows running score
-    document.getElementById("player-running-count").innerHTML = `Your Score: ${playerScore}`;
-    document.getElementById("computer-running-count").innerHTML = `Computer Score: ${computerScore}`;
+    document.getElementById("running-count").innerHTML = `Your Score: ${playerScore} || Computer Score: ${computerScore}`;
 }
 
 playGame();
