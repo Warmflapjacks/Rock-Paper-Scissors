@@ -1,6 +1,7 @@
 //global variables
 let playerScore = 0;
 let computerScore = 0;
+let roundNumber = 0;
 let buttons = document.querySelectorAll('button');
 
 //gets computer selection
@@ -44,6 +45,9 @@ function playGame() {
 
 //define playRound. playerSelection and computerSelection are local variables in the function and are not global
 function playRound (playerSelection, computerSelection) {
+    //increases round number per round played
+    roundNumber++;
+
     //if selections are a tie
     if (playerSelection === computerSelection) {                 
         document.getElementById("game-log").textContent = "Its a tie!";
@@ -82,7 +86,10 @@ function playRound (playerSelection, computerSelection) {
         }
     }
     //shows running score
-    document.getElementById("running-count").innerHTML = `Your Score: ${playerScore} || Computer Score: ${computerScore}`;
+    document.getElementById("running-count").textContent = `Your Score: ${playerScore} || Computer Score: ${computerScore}`;
+
+    //shows round number
+    document.getElementById("round-number").textContent = `Round number: ${roundNumber}`;
 }
 
 playGame();
