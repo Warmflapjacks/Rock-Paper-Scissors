@@ -111,6 +111,13 @@ button {
     align-items: center;
 }
 
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
 #computer-weapon {
     font-size: 30px;
 }
