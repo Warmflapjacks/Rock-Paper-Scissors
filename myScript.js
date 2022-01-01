@@ -27,7 +27,13 @@ function playGame() {
 
             //call playRound function
             if ((playerScore === 5) || (computerScore === 5)) {
-                document.getElementById("final-result").textContent = "GAME OVER";
+                //endgame messages
+                if (playerScore > computerScore) {
+                    document.getElementById("final-result").textContent = "Bloody hell, you've decimated the enemy! They are in shambles and running away!";
+                }
+                else {
+                document.getElementById("final-result").textContent = "You have been destroyed.";
+                }
             }
             else {
                 playRound(playerSelection,computerSelection);
@@ -76,8 +82,8 @@ function playRound (playerSelection, computerSelection) {
         }
     }
     //shows running score
-    document.getElementById("player-running-count").innerHTML = `${playerScore}`;
-    document.getElementById("computer-running-count").innerHTML = `${computerScore}`;
+    document.getElementById("player-running-count").innerHTML = `Your Score: ${playerScore}`;
+    document.getElementById("computer-running-count").innerHTML = `Computer Score: ${computerScore}`;
 }
 
 playGame();
